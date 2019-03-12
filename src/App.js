@@ -5,7 +5,7 @@ import './App.css';
 class MessageForm extends Component {
   constructor(props) {
     super(props)
-    this.state = {message: 'yo'}
+    this.state = {message: ''}
     this.clickHandler = this.clickHandler.bind(this)
     this.changeHandler = this.changeHandler.bind(this)
   }
