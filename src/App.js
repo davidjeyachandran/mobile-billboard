@@ -47,16 +47,9 @@ class Billboard extends Component {
   constructor(props) {
     super(props);
     this.state = {step: 1};
-    this.setPage = this.setPage.bind(this);
     this.positionX = 0;
     this.positionY = 0;
     // console.log('length=' + this.getTextWidth(this.props.message, 'normal 20em georgia'));
-  }
-
-  setPage(page) {
-    this.setState({page: page});
-    console.log('page=' +page);
-    this.positionX = -730 * (page-1);
   }
 
   getTextWidth(text, font) {
@@ -69,7 +62,6 @@ class Billboard extends Component {
   }
 
   render() {
-    console.log(this.positionX);
       return (
         <div>
           <BillboardScreen text={this.props.message}
