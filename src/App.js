@@ -26,7 +26,7 @@ class MessageForm extends Component {
           <textarea 
             value={this.state.message}
             onChange={this.changeHandler}
-            placeholder="Please enter your message" rows="3" type="text" id="message"></textarea>
+            placeholder="Please enter your message" rows="2" type="text" id="message"></textarea>
         </form>
         <button onClick={this.clickHandler} className="button" id="submit">Submit</button>
       </div>
