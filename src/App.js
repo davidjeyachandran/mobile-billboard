@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BillboardScreen from './BillboardScreen';
+import {getData, postData} from './APIfunctions';
 import './App.css';
 
 class MessageForm extends Component {
@@ -82,6 +83,7 @@ class App extends Component {
 
   clickSubmit(message) {
     // send to db
+    postData({message: message}, (data) => this.setState({message: data}))
     console.log('clickSubmit');
     this.setState({step: 2, url: 'https://mobilebillboard/?message=' + encodeURI(message), message: message})
   }
